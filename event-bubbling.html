@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="tomato" style="background-color: tomato; padding: 30px;">
+        <div id="orange" style="background-color: orange; padding: 30px">
+            <div id="strawberry" style="background-color: pink; padding: 30px">
+                CLICK ME
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        document.querySelector('#tomato').addEventListener('click', function (ev) {
+            console.log('click en tomato', ev)
+        })
+        document.querySelector('#orange').addEventListener('click', function (ev) {
+            ev.stopPropagation();
+            console.log('click en orange', ev)
+        })
+
+    </script>
+
+</body>
+
+</html>

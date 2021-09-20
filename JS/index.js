@@ -1,3 +1,4 @@
+import { tweetView } from './views.js'
 window.addEventListener('DOMContentLoaded', function () {
     const tweets = [
         {
@@ -23,11 +24,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
         for (const tweet of tweets) {
             const tweetElement = document.createElement('article') //creamos el padre
-            const tweetHTML = `<div class="post">
-                <strong class="author">${tweet.author}</strong>
-                <p class="message">${tweet.message}</p>
-                <time datetime="${tweet.date}">${tweet.date}</time>
-            </div>`
+            const tweetHTML = tweetView(tweet)
 
             tweetElement.innerHTML = tweetHTML; // inyectamos los textos
             list.appendChild(tweetElement) //le decimos donde meterlos
